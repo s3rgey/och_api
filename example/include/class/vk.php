@@ -15,7 +15,7 @@ class vk
 
     public function request($method,$params=array()){
         $url = 'https://api.vk.com/method/'.$method;
-        $params['access_token']= "bb1184adcbe19123255786a9a99024a733df222e720bdeb4990af0acbb0bdc5a67615b354629547f7ab68";
+        $params['access_token']= "a674e7e28d9494db2368c299c10475659ce5f89b0275f65b3f7d5959bfe88b1458db4e78ebf79d7b99211";
         $params['v']= "5.81";
         if (function_exists('curl_init')) {
             $ch = curl_init();

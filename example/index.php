@@ -4,7 +4,11 @@ spl_autoload_register(function ($class_name)
     include 'include/class/'.$class_name.'.php';
 });
 $vk = new vk();
-$apiKey = '01WsHihKS8VYqpOJ0zdJShHyr'; // Ваш API ключ
+
+//==========================//
+$apiKey = ''; // Ваш API ключ
+//==========================//
+
 $servers = json_decode(file_get_contents('http://gs-dev.ru/och/api/server_info.php?key=' . $apiKey));
 $owner = json_decode(file_get_contents('http://gs-dev.ru/och/api/owner_info.php?key=' . $apiKey));
 $searchUser = $vk->request("users.get", ["user_ids" => $owner->vk_id, "fields" => "photo_100"]);
